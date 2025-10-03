@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travelling</title>
+</head>
+<body>
+    <ul>
+        <li><h4><a href="./index.html">Основные типы космических ракет</a></h4></li>
+        <li><h4><a href="">Списки лучших космических ракет для путешествий</a></h4></li>
+    </ul>  
+    <hr>
+
+    <details>
+        <summary><strong>График</strong></summary>
+        <form action="">
+            <table>
+                <tr align="center">
+                    <th>Значение по оси OX</th>
+                    <th>Результат</th>
+                </tr>
+                <tr>
+                    <td><input type="radio">Тип</td>
+                    <td><input type="checkbox">Максимальная дальность хода</td>
+                </tr>
+                <tr>
+                    <td><input type="radio">Грузоподъёмность</td>
+                    <td><input type="checkbox">Максимальная скорость</td>
+                </tr>
+                <tr>
+                    <td><input type="radio">Дальность</td>
+                    <td><input type="checkbox">Максимальная стоимость</td>
+                </tr>
+            </table>
+            <button>Построить</button>
+        </form><br>
+    </details>
+
+    <details>
+        <summary><strong>Фильтр</strong></summary>
+        <form action="">
+            <p>
+                <label>Название: <input type="text" placeholder="Победа 2"></label>
+            </p>
+
+            <p>
+                <label>Тип: <select>
+                        <option value="light">Малый</option>
+                        <option value="medium">Средний</option>
+                        <option value="big">Тяжелый</option>
+                        <option value="heavy">Сверхтяжелый</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label>Страна: <input type="text" placeholder="Россия"></label>
+            </p>
+            
+            <p>
+                <label>Грузоподъёмность (в тоннах): <input type="number" min="1" max="200" placeholder="40"></label>
+            </p>
+            
+            <p>
+                <label>Дальность хода (в тыс. км.): <input type="number" min="1" placeholder="150"></label>
+            </p>
+            
+            <p>
+                <label>Скорость (в км/с): <input type="number" min="1" placeholder="5"></label>
+            </p>
+            
+            <p>
+                <label>Стоимость (в рублях): <input type="number" min="1" placeholder="150"></label>
+            </p>
+            <p>
+                <label>Дата: от <input type="date"> до <input type="date"></label>
+            </p>
+            <button>Найти</button>
+        </form><br>
+    </details>
+
+    <details>
+        <summary><strong>Сортировка</strong></summary>
+        <p>Стоимость: 
+            <select>
+                <option value="nothing">Не обозначено</option>
+                <option value="upper">По возрастанию</option>
+                <option value="lower">По убыванию</option>
+            </select>
+        </p>
+        <p>Скорость: 
+            <select>
+                <option value="nothing">Не обозначено</option>
+                <option value="upper">По возрастанию</option>
+                <option value="lower">По убыванию</option>
+            </select>
+        </p>
+        <p>Дальность хода: 
+            <select>
+                <option value="nothing">Не обозначено</option>
+                <option value="upper">По возрастанию</option>
+                <option value="lower">По убыванию</option>
+            </select>
+        </p>
+    </details><br>
+
+    <table border="5px" cellpadding="5px" cellspacing="0px">
+        <tr align="center" bgcolor="#D3D3D3">
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Страна</th>
+            <th>Грузоподъёмность</th>
+            <th>Дальность хода</th>
+            <th>Скорость</th>
+            <th>Стоимость</th>
+            <th>Дата отправки</th>
+        </tr>
+
+        <tr><td>Союз-2</td><td>Средняя</td><td>Россия</td><td>24</td><td>60</td><td>8.1</td><td>4500</td><td>2025-01-12</td></tr>
+        <tr><td>Falcon 9</td><td>Средняя</td><td>США</td><td>22</td><td>65</td><td>8.2</td><td>5000</td><td>2025-02-18</td></tr>
+        <tr><td>Falcon Heavy</td><td>Тяжелая</td><td>США</td><td>64</td><td>120</td><td>8.0</td><td>150</td><td>2025-03-05</td></tr>
+        <tr><td>Starship</td><td>Сверхтяжёлая</td><td>США</td><td>100</td><td>250</td><td>9.0</td><td>30000</td><td>2025-04-10</td></tr>
+        <tr><td>Long March 5</td><td>Тяжелая</td><td>Китай</td><td>55</td><td>130</td><td>7.9</td><td>120</td><td>2025-05-01</td></tr>
+        <tr><td>Long March 6</td><td>Малая</td><td>Китай</td><td>6</td><td>15</td><td>7.8</td><td>1800</td><td>2025-06-15</td></tr>
+        <tr><td>H-IIA</td><td>Средняя</td><td>Япония</td><td>15</td><td>55</td><td>8.1</td><td>4700</td><td>2025-07-20</td></tr>
+        <tr><td>H-IIB</td><td>Средняя</td><td>Япония</td><td>18</td><td>60</td><td>8.3</td><td>50000</td><td>2025-08-11</td></tr>
+        <tr><td>PSLV</td><td>Малая</td><td>Индия</td><td>4</td><td>10</td><td>7.6</td><td>1200</td><td>2025-09-02</td></tr>
+        <tr><td>GSLV Mk III</td><td>Тяжелая</td><td>Индия</td><td>50</td><td>140</td><td>8.0</td><td>10000000</td><td>2025-10-14</td></tr>
+
+        <tr><td>Ariane 5</td><td>Тяжелая</td><td>Европа</td><td>47</td><td>120</td><td>8.0</td><td>130</td><td>2025-01-20</td></tr>
+        <tr><td>Ariane 6</td><td>Тяжелая</td><td>Европа</td><td>50</td><td>125</td><td>8.2</td><td>1400/td><td>2025-02-25</td></tr>
+        <tr><td>Vega</td><td>Малая</td><td>Европа</td><td>2</td><td>8</td><td>7.5</td><td>10000</td><td>2025-03-18</td></tr>
+        <tr><td>Electron</td><td>Малая</td><td>Новая Зеландия</td><td>1.5</td><td>7</td><td>7.4</td><td>900</td><td>2025-04-22</td></tr>
+        <tr><td>Delta IV Heavy</td><td>Сверхтяжёлая</td><td>США</td><td>28</td><td>120</td><td>8.1</td><td>2000/td><td>2025-05-30</td></tr>
+        <tr><td>Atlas V</td><td>Тяжелая</td><td>США</td><td>20</td><td>100</td><td>7.9</td><td>110</td><td>2025-06-05</td></tr>
+        <tr><td>Tianlong-1</td><td>Малая</td><td>Китай</td><td>5</td><td>12</td><td>7.7</td><td>15000</td><td>2025-07-12</td></tr>
+        <tr><td>Shenzhou Rocket</td><td>Средняя</td><td>Китай</td><td>18</td><td>50</td><td>8.0</td><td>500</td><td>2025-08-20</td></tr>
+        <tr><td>Hwasong-15</td><td>Сверхтяжёлая</td><td>КНДР</td><td>120</td><td>250</td><td>9.0</td><td>3000</td><td>2025-09-14</td></tr>
+        <tr><td>KSLV-II</td><td>Средняя</td><td>Южная Корея</td><td>16</td><td>55</td><td>8.2</td><td>48000</td><td>2025-10-01</td></tr>
+
+        <tr><td>Angara A5</td><td>Тяжелая</td><td>Россия</td><td>24</td><td>110</td><td>7.9</td><td>1250000000</td><td>2025-01-15</td></tr>
+        <tr><td>Rokot</td><td>Малая</td><td>Россия</td><td>2</td><td>10</td><td>7.5</td><td>900</td><td>2025-02-10</td></tr>
+        <tr><td>Vostok</td><td>Малая</td><td>Россия</td><td>4</td><td>12</td><td>7.6</td><td>150</td><td>2025-03-12</td></tr>
+        <tr><td>Voskhod</td><td>Малая</td><td>Россия</td><td>5</td><td>15</td><td>7.7</td><td>17000</td><td>2025-04-05</td></tr>
+        <tr><td>Proton-M</td><td>Тяжелая</td><td>Россия</td><td>22</td><td>130</td><td>8.0</td><td>140</td><td>2025-05-22</td></tr>
+        <tr><td>Terran 1</td><td>Малая</td><td>США</td><td>2.5</td><td>8</td><td>7.4</td><td>950</td><td>2025-06-18</td></tr>
+        <tr><td>Neptune</td><td>Средняя</td><td>США</td><td>20</td><td>60</td><td>8.1</td><td>4800</td><td>2025-07-08</td></tr>
+        <tr><td>LauncherOne</td><td>Малая</td><td>США</td><td>1.8</td><td>7</td><td>7.3</td><td>850</td><td>2025-08-21</td></tr>
+        <tr><td>Delta II</td><td>Средняя</td0000><td>США</td><td>14</td><td>50</td><td>8.0</td><td>450</td><td>2025-09-10</td></tr>
+        <tr><td>Ariane 4</td><td>Тяжелая</td><td>Европа</td><td>10</td><td>100</td><td>7.8</td><td>10000</td><td>2025-10-15</td></tr>
+
+        <tr><td>Hercules</td><td>Сверхтяжёлая</td><td>США</td><td>130</td><td>270</td><td>9.2</td><td>32000</td><td>2025-11-01</td></tr>
+        <tr><td>Blue Moon</td><td>Средняя</td><td>США</td><td>18</td><td>55</td><td>8.2</td><td>490000000</td><td>2025-11-12</td></tr>
+        <tr><td>New Glenn</td><td>Тяжелая</td><td>США</td><td>45</td><td>120</td><td>8.0</td><td>135000</td><td>2025-12-05</td></tr>
+        <tr><td>Kuaizhou 1</td><td>Малая</td><td>Китай</td><td>2</td><td>8</td><td>7.5</td><td>95000000</td><td>2025-12-18</td></tr>
+        <tr><td>Shavit</td><td>Малая</td><td>Израиль</td><td>1.7</td><td>7</td><td>7.4</td><td>900</td><td>2025-12-30</td></tr>
+        <tr><td>Black Arrow</td><td>Малая</td><td>Великобритания</td><td>1.5</td><td>6</td><td>7.3</td><td>850</td><td>2025-11-22</td></tr>
+        <tr><td>Vega C</td><td>Средняя</td><td>Европа</td><td>10</td><td>60</td><td>8.1</td><td>46000</td><td>2025-10-29</td></tr>
+        <tr><td>Long March 2F</td><td>Средняя</td><td>Китай</td><td>8</td><td>40</td><td>8.0</td><td>40000</td><td>2025-09-18</td></tr>
+        <tr><td>Long March 3B</td><td>Тяжелая</td><td>Китай</td><td>45</td><td>120</td><td>8.1</td><td>125000</td><td>2025-08-27</td></tr>
+        <tr><td>Long March 7</td><td>Средняя</td><td>Китай</td><td>15</td><td>55</td><td>8.1</td><td>48000</td><td>2025-07-19</td></tr>
+
+        <tr><td>LauncherOne (Virgin)</td><td>Малая</td><td>США</td><td>1.8</td><td>7</td><td>7.3</td><td>8500</td><td>2025-06-25</td></tr>
+        <tr><td>Vega E</td><td>Малая</td><td>Европа</td><td>2.2</td><td>8</td><td>7.5</td><td>950</td><td>2025-07-10</td></tr>
+        <tr><td>New Armstrong</td><td>Сверхтяжёлая</td><td>США</td><td>140</td><td>280</td><td>9.3</td><td>3300</td><td>2025-08-15</td></tr>
+        <tr><td>Red Dragon</td><td>Сверхтяжёлая</td><td>США</td><td>130</td><td>260</td><td>9.1</td><td>3100</td><td>2025-09-05</td></tr>
+        <tr><td>Dream Chaser</td><td>Малая</td><td>США</td><td>2</td><td>9</td><td>7.6</td><td>900</td><td>2025-09-28</td></tr>
+        <tr><td>Kounotori Rocket</td><td>Средняя</td><td>Япония</td><td>14</td><td>50</td><td>8.1</td><td>4700</td><td>2025-10-12</td></tr>
+        <tr><td>Gaganyaan Launcher</td><td>Средняя</td><td>Индия</td><td>15</td><td>55</td><td>8.2</td><td>480000</td><td>2025-10-30</td></tr>
+        <tr><td>PSLV-XL</td><td>Средняя</td><td>Индия</td><td>17</td><td>60</td><td>8.3</td><td>50000000</td><td>2025-11-15</td></tr>
+        <tr><td>H-IIB Transfer Vehicle</td><td>Средняя</td><td>Япония</td><td>16</td><td>55</td><td>8.2</td><td>49000</td><td>2025-11-28</td></tr>
+        <tr><td>Angara A5P</td><td>Тяжелая</td><td>Россия</td><td>48</td><td>130</td><td>8.0</td><td>1400</td><td>2025-12-18</td></tr>
+
+    </table>
+</body>
+<footer>
+
+</footer>
+</html>
