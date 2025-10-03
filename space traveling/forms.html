@@ -15,26 +15,34 @@
     <details>
         <summary><strong>График</strong></summary>
         <form>
-            <table>
-                <tr align="center">
-                    <th>Значение по оси OX</th>
-                    <th>Результат</th>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="ox">Тип</td>
-                    <td><input type="checkbox" name="result1">Максимальная дальность хода</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="ox">Грузоподъёмность</td>
-                    <td><input type="checkbox" name="result2">Максимальная скорость</td>
-                </tr>
-                <tr>
-                    <td><input type="radio" name="ox">Дальность</td>
-                    <td><input type="checkbox" name="result3">Максимальная стоимость</td>
-                </tr>
-            </table>
-            <button type="submit">Построить</button>
-        </form><br>
+            <p>
+                <input type="radio" name="ox" id="type">
+                <label for="type">Тип</label>
+            </p>
+            <p>
+                <input type="radio" name="ox" id="payload">
+                <label for="payload">Грузоподъёмность</label>
+            </p>
+            <p>
+                <input type="radio" name="ox" id="range">
+                <label for="range">Дальность</label>
+            </p>
+
+            <p>
+                <input type="checkbox" name="result1" id="max_range">
+                <label for="max_range">Максимальная дальность хода</label>
+            </p>
+            <p>
+                <input type="checkbox" name="result2" id="max_speed">
+                <label for="max_speed">Максимальная скорость</label>
+            </p>
+            <p>
+                <input type="checkbox" name="result3" id="max_cost">
+                <label for="max_cost">Максимальная стоимость</label>
+            </p>
+
+            <button type="button">Построить</button>
+        </form>
     </details>
 
     <details>
@@ -58,56 +66,86 @@
             <p>
                 <label>Страна: <input type="text" placeholder="Россия"></label>
             </p>
-            
+
             <p>
-                <label>Грузоподъёмность (в тоннах): <input type="number" min="1" max="200" placeholder="40"></label>
+                <label>Грузоподъёмность (в тоннах): От <input type="number" min="1" max="200" placeholder="1">
+                До <input type="number" min="1" max="200" placeholder="200"></label>
             </p>
-            
+
             <p>
-                <label>Дальность хода (в тыс. км.): <input type="number" min="1" placeholder="150"></label>
+                <label>Дальность хода (в тыс. км.): От <input type="number" min="1" placeholder="1">
+                До <input type="number" min="1" placeholder="1000"></label>
             </p>
-            
+
             <p>
-                <label>Скорость (в км/с): <input type="number" min="1" placeholder="5"></label>
+                <label>Скорость (в км/с): От <input type="number" min="1" placeholder="1">
+                До <input type="number" min="1" placeholder="20"></label>
             </p>
-            
+
             <p>
-                <label>Стоимость (в рублях): <input type="number" min="1" placeholder="150"></label>
+                <label>Стоимость (в рублях): От <input type="number" min="1" placeholder="100">
+                До <input type="number" min="1" placeholder="1000000"></label>
             </p>
-            
-            <!-- Исправлено на отдельные label для каждой даты -->
+
             <p>
-                <label>Дата от: <input type="date" name="date_from"></label>
-                <label>до: <input type="date" name="date_to"></label>
+                <label>Дата: От <input type="date" name="date_from"></label>
+                <label>До <input type="date" name="date_to"></label>
             </p>
-            
-            <button type="submit">Найти</button>
-        </form><br>
+
+            <button type="button">Найти</button>
+        </form>
     </details>
 
     <details>
-        <summary><strong>Сортировка</strong></summary>
-        <p>Стоимость: 
-            <select>
-                <option value="nothing">Не обозначено</option>
-                <option value="upper">По возрастанию</option>
-                <option value="lower">По убыванию</option>
-            </select>
-        </p>
-        <p>Скорость: 
-            <select>
-                <option value="nothing">Не обозначено</option>
-                <option value="upper">По возрастанию</option>
-                <option value="lower">По убыванию</option>
-            </select>
-        </p>
-        <p>Дальность хода: 
-            <select>
-                <option value="nothing">Не обозначено</option>
-                <option value="upper">По возрастанию</option>
-                <option value="lower">По убыванию</option>
-            </select>
-        </p>
+        <summary><strong>Сортировать по:</strong></summary>
+            <form>
+                <label for="firstSort">Первый уровень: </label>
+                <select id="firstSort" name="option">
+                    <option value="none" selected>Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="weight">Грузоподъёмность</option>
+                    <option value="range">Дальность хода</option>
+                    <option value="speed">Скорость</option>
+                    <option value="price">Стоимость</option>
+                    <option value="date">Дата отправки</option>
+                </select>
+                <label for="isFirstSort">по убыванию?</label>
+                <input type="checkbox" id="isFirstSort" name="first"> <br>
+
+                <label for="secondSort">Второй уровень: </label>
+                <select id="secondSort" name="option">
+                    <option value="none" selected>Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="weight">Грузоподъёмность</option>
+                    <option value="range">Дальность хода</option>
+                    <option value="speed">Скорость</option>
+                    <option value="price">Стоимость</option>
+                    <option value="date">Дата отправки</option>
+                </select>
+                <label for="isSecondSort">по убыванию?</label>
+                <input type="checkbox" id="isSecondSort" name="second"> <br>
+
+                <label for="thirdSort">Второй уровень: </label>
+                <select id="thirdSort" name="option">
+                    <option value="none" selected>Нет</option>
+                    <option value="name">Название</option>
+                    <option value="type">Тип</option>
+                    <option value="country">Страна</option>
+                    <option value="weight">Грузоподъёмность</option>
+                    <option value="range">Дальность хода</option>
+                    <option value="speed">Скорость</option>
+                    <option value="price">Стоимость</option>
+                    <option value="date">Дата отправки</option>
+                </select>
+                <label for="isThirdSort">по убыванию?</label>
+                <input type="checkbox" id="isThirdSort" name="third"> <br>
+
+                <input type="button" value="Сортировать">
+            </form>
     </details><br>
 
     <table border="5px" cellpadding="5px" cellspacing="0px">
@@ -134,7 +172,7 @@
         <tr><td>GSLV Mk III</td><td>Тяжелая</td><td>Индия</td><td>50</td><td>140</td><td>8.0</td><td>10000000</td><td>2025-10-14</td></tr>
 
         <tr><td>Ariane 5</td><td>Тяжелая</td><td>Европа</td><td>47</td><td>120</td><td>8.0</td><td>130</td><td>2025-01-20</td></tr>
-        <tr><td>Ariane 6</td><td>Тяжелая</td><td>Европа</td><td>50</td><td>125</td><td>8.2</td><td>1400><td>2025-02-25</td></tr>
+        <tr><td>Ariane 6</td><td>Тяжелая</td><td>Европа</td><td>50</td><td>125</td><td>8.2</td><td>1400<td>2025-02-25</td></tr>
         <tr><td>Vega</td><td>Малая</td><td>Европа</td><td>2</td><td>8</td><td>7.5</td><td>10000</td><td>2025-03-18</td></tr>
         <tr><td>Electron</td><td>Малая</td><td>Новая Зеландия</td><td>1.5</td><td>7</td><td>7.4</td><td>900</td><td>2025-04-22</td></tr>
         <tr><td>Delta IV Heavy</td><td>Сверхтяжёлая</td><td>США</td><td>28</td><td>120</td><td>8.1</td><td>2000><td>2025-05-30</td></tr>
