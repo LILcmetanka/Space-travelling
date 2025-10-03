@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Document</title>
 </head>
 <body>
     <fieldset>
-    <legend><h4><font color="#013220">Задание</font></h4></legend>
-    <p>
-        <font size="3">Заполните пропуски в следующей программе:</font>
-    </p>
-    <form>
-    <pre><code>
-n = int(input('n='))
-if n < <input type='number' size="4">:
+        <legend><h4 style="color:#013220;">Задание</h4></legend>
+        <p><span style="font-size:14px;">Заполните пропуски в следующей программе:</span></p>
+
+        <form>
+<pre><code>n = int(input('n='))
+if n &lt; </code><input type="number" style="width:4em;"><code>:
     print("Неверное количество чисел")
 else:
-        max = int(input("Введите число 1:"))
-        for i in range(<select required>
-            <option value="" disabled selected>n</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>):
-            number = int(input("Введите число " +str(<select>
-                <option value="" disabled selected>i</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>)+ ":"))
-            if max <input type="number" size="4"> number:
-                max = number
-        print("Максимальное значение: ", max)
-    <code></pre>
-    <button type="submit">Отправить</button>
-    </form>
+    max = int(input("Введите число 1:"))
+    for i in range(</code><select required>
+        <option value="" disabled selected>n</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select><code>):
+        number = int(input("Введите число " + str(</code><select>
+        <option value="" disabled selected>i</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select><code>) + ":"))
+        if max &lt; </code><input type="number" style="width:4em;"><code> number:
+            max = number
+    print("Максимальное значение: ", max)</code></pre>
+
+            <button type="submit">Отправить</button>
+        </form>
     </fieldset>
 </body>
 </html>

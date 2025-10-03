@@ -14,38 +14,39 @@
 
     <details>
         <summary><strong>График</strong></summary>
-        <form action="">
+        <form>
             <table>
                 <tr align="center">
                     <th>Значение по оси OX</th>
                     <th>Результат</th>
                 </tr>
                 <tr>
-                    <td><input type="radio">Тип</td>
-                    <td><input type="checkbox">Максимальная дальность хода</td>
+                    <td><input type="radio" name="ox">Тип</td>
+                    <td><input type="checkbox" name="result1">Максимальная дальность хода</td>
                 </tr>
                 <tr>
-                    <td><input type="radio">Грузоподъёмность</td>
-                    <td><input type="checkbox">Максимальная скорость</td>
+                    <td><input type="radio" name="ox">Грузоподъёмность</td>
+                    <td><input type="checkbox" name="result2">Максимальная скорость</td>
                 </tr>
                 <tr>
-                    <td><input type="radio">Дальность</td>
-                    <td><input type="checkbox">Максимальная стоимость</td>
+                    <td><input type="radio" name="ox">Дальность</td>
+                    <td><input type="checkbox" name="result3">Максимальная стоимость</td>
                 </tr>
             </table>
-            <button>Построить</button>
+            <button type="submit">Построить</button>
         </form><br>
     </details>
 
     <details>
         <summary><strong>Фильтр</strong></summary>
-        <form action="">
+        <form>
             <p>
                 <label>Название: <input type="text" placeholder="Победа 2"></label>
             </p>
 
             <p>
-                <label>Тип: <select>
+                <label>Тип: 
+                    <select>
                         <option value="light">Малый</option>
                         <option value="medium">Средний</option>
                         <option value="big">Тяжелый</option>
@@ -73,10 +74,14 @@
             <p>
                 <label>Стоимость (в рублях): <input type="number" min="1" placeholder="150"></label>
             </p>
+            
+            <!-- Исправлено на отдельные label для каждой даты -->
             <p>
-                <label>Дата: от <input type="date"> до <input type="date"></label>
+                <label>Дата от: <input type="date" name="date_from"></label>
+                <label>до: <input type="date" name="date_to"></label>
             </p>
-            <button>Найти</button>
+            
+            <button type="submit">Найти</button>
         </form><br>
     </details>
 
@@ -147,7 +152,7 @@
         <tr><td>Terran 1</td><td>Малая</td><td>США</td><td>2.5</td><td>8</td><td>7.4</td><td>950</td><td>2025-06-18</td></tr>
         <tr><td>Neptune</td><td>Средняя</td><td>США</td><td>20</td><td>60</td><td>8.1</td><td>4800</td><td>2025-07-08</td></tr>
         <tr><td>LauncherOne</td><td>Малая</td><td>США</td><td>1.8</td><td>7</td><td>7.3</td><td>850</td><td>2025-08-21</td></tr>
-        <tr><td>Delta II</td><td>Средняя</td0000><td>США</td><td>14</td><td>50</td><td>8.0</td><td>450</td><td>2025-09-10</td></tr>
+        <tr><td>Delta II</td><td>Средняя</td><td>США</td><td>14</td><td>50</td><td>8.0</td><td>450</td><td>2025-09-10</td></tr>
         <tr><td>Ariane 4</td><td>Тяжелая</td><td>Европа</td><td>10</td><td>100</td><td>7.8</td><td>10000</td><td>2025-10-15</td></tr>
 
         <tr><td>Hercules</td><td>Сверхтяжёлая</td><td>США</td><td>130</td><td>270</td><td>9.2</td><td>32000</td><td>2025-11-01</td></tr>
@@ -173,8 +178,8 @@
         <tr><td>Angara A5P</td><td>Тяжелая</td><td>Россия</td><td>48</td><td>130</td><td>8.0</td><td>1400</td><td>2025-12-18</td></tr>
 
     </table>
-</body>
-<footer>
 
-</footer>
+    <footer>
+    </footer>
+</body>
 </html>
