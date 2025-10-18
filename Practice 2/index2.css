@@ -1,0 +1,28 @@
+.mid {
+    width: 80%;
+    margin: auto;
+    background: lightgreen;
+}
+
+.block {
+    display: inline-block;
+    width: 250px;
+    margin: 30px 30px;
+}
+
+.title {
+    float: right;
+    font-weight: bold;
+    background-color: white;
+    padding: 5px;
+}   
+
+.text {
+    float: left;
+    background-color: white;
+    padding: 8px 10px;
+}
+
+p {
+    margin: 0px;
+}
