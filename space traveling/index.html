@@ -1,141 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Космические ракеты</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body>
-
-<header>
-    <div class="hat">
-        <h1>Космические путешествия</h1>
-        <div>
-            <div class="menu active">Меню 1</div>
-            <div class="menu">Меню 2</div>
-            <div class="menu">Меню 3</div>
-            <div class="menu">Меню 4</div>
-        </div>
-    </div>
-</header>
-
-<div class="wrap">
-    <div class="left">
-        <img src="./imgs/dmg_4.jpg" alt="Космический фон" class="wrap-img">
-    </div>
-    <div class="right">
-        <div class="top">
-            <img src="./imgs/dmg_2.jpg" alt="Космический фон" class="wrap-img">
-        </div>
-        <div class="mid">
-            <div class="mid-left">
-                <img src="./imgs/dmg_3.jpg" alt="Космический фон" class="wrap-img">
-            </div>
-            <div class="mid-right">
-                <img src="./imgs/dmg_1.jpg" alt="Космический фон" class="wrap-img">
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="bottom-left">
-                <img src="./imgs/dmg_5.jpg" alt="Космический фон" class="wrap-img">
-            </div>
-            <div class="bottom-right">
-                <img src="./imgs/dmg_6.jpg" alt="Космический фон" class="wrap-img">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-
-    <div class="card large">
-        <img src="./imgs/rocket_5.jpg" alt="Основные типы космических ракет" class="pic">
-        <h3>Основные типы космических ракет</h3>
-        <p>Космические ракеты — это мощные транспортные системы, предназначенные для вывода полезных грузов и экипажей за пределы атмосферы. Они бывают одно-, двух- и многоступенчатыми: каждая ступень обеспечивает свой участок полёта</p>
-        <p>По типу используемого топлива ракеты делятся на жидкостные, твёрдотопливные и гибридные. Жидкостные двигатели позволяют регулировать тягу и повторно включать двигатель, твёрдотопливные отличаются простотой и надёжностью, а гибридные сочетают достоинства обеих технологий.</p>
-        <p>Назначение ракет также различается. Одни применяются для вывода спутников связи и навигации на орбиту Земли, другие — для пилотируемых миссий и межпланетных исследований. Существуют также ракеты военного назначения и носители для научных экспериментов.</p>
-        <p>Современные ракеты отличаются высокой степенью автоматизации и точности управления. Благодаря новым материалам и системам навигации они способны доставлять грузы на орбиту с минимальными затратами топлива и с высокой надёжностью.</p>
-        <p>Космическая отрасль развивается стремительно: создаются сверхтяжёлые ракеты для полётов к Луне и Марсу, исследуются новые типы топлива и конструкций. Всё это приближает человечество к эпохе активного освоения дальнего космоса.</p>
-        <p>В будущем ракеты будут использоваться не только для вывода аппаратов, но и как часть глобальной транспортной системы.</p>
-        <p><strong>Списки лучших космических ракет для путешествий</strong></p>
-        <a href="./forms.html" class="left-btn">Подробнее</a>
-    </div>
-
-    <div class="right-side">
-
-        <div class="top-right-column">
-            <div class="card pink wide">
-                <h3>Ракеты малой дальности (лёгкие носители)</h3>
-                <p>Грузоподъёмность: до 2 тонн на низкую околоземную орбиту (НОО). Используются для небольших спутников, микроспутников и группировок «кубсатов».</p>
-                <ul>
-                    <li>Чаще всего имеют 2–3 ступени.</li>
-                    <li>Используются для коммерческих пусков и быстрых запусков лёгких аппаратов.</li>
-                    <li>Запуск обычно дешевле и проще в организации.</li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">Космические путешествия</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="object1.html">Ракета S</a></li>
+                    <li class="nav-item"><a class="nav-link" href="object2.html">Ракета M</a></li>
+                    <li class="nav-item"><a class="nav-link" href="object3.html">Ракета L</a></li>
+                    <li class="nav-item"><a class="nav-link" href="object4.html">Ракета XL</a></li>
                 </ul>
-                <p><strong>Примеры:</strong> российская «Союз-2.1в» (до 2 т), американская Electron (300 кг), индийская PSLV Light.</p>
-                <img src="./imgs/rocket_1.jpg" alt="Ракета малой дальности" class="pic">
-                <a href="./object1.html" class="right-btn">Подробнее</a>
-            </div>
-
-            <div class="card blue wide">
-                <h3>Средние ракеты</h3>
-                <p>Грузоподъёмность: 2–20 тонн на НОО. Используются для запуска навигационных систем, пилотируемых кораблей, научных аппаратов и средних грузов к МКС.</p>
-                <ul>
-                    <li>Могут работать как на НОО, так и на геопереходную орбиту (ГПО).</li>
-                    <li>Часто являются «рабочими лошадками» космонавтики.</li>
-                </ul>
-                <p><strong>Примеры:</strong> российский «Союз-2» (до 8 т), американская Falcon 9 (22,8 т на НОО в одноразовом варианте), европейская Ariane 5 (10 т на ГПО).</p>
-                <img src="./imgs/rocket_2.jpg" alt="Средняя ракета" class="pic">
-                <a href="./object2.html" class="left-btn">Подробнее</a>
             </div>
         </div>
+    </nav>
 
-        <div class="bottom-right-row">
-            <div class="card pink small">
-                <h3>Тяжёлые ракеты</h3>
-                <div class="text-wrapper">
-                    <p>Грузоподъёмность: 20–50 тонн на НОО. Используются для доставки больших грузов к Луне, Марсу, тяжёлых космических станций или модулей для МКС.</p>
-                    <a href="./object3.html" class="link top-right">Подробнее</a>
-                </div>
-                <img src="./imgs/rocket_3.jpg" alt="Тяжелая ракета" class="pic">
-            </div>
+    <div id="spaceCarousel" class="carousel slide my-4" data-bs-ride="carousel">
 
-            <div class="card pink small">
-                <h3>Тяжёлые ракеты</h3>
-                <div class="text-wrapper">
-                    <p>Особенности: многомоторные ступени, иногда в кластерной схеме. Часто используются для межпланетных миссий.</p>
-                    <p><strong>Примеры:</strong> советский «Протон-М» (23 т), американская Delta IV Heavy (28 т), китайская Long March 5 (25 т).</p>
-                    <a href="./object3.html" class="link top-right">Подробнее</a>
-                </div>
-                <img src="./imgs/rocket_3.jpg" alt="Тяжелая ракета" class="pic">
-            </div>
-
-            <div class="card blue small">
-                <img src="./imgs/rocket_4.jpg" alt="Сверхтяжелая ракета" class="pic">
-                <h3>Сверхтяжёлые ракеты</h3>
-                <div class="text-wrapper">  
-                    <p>Грузоподъёмность: более 50 тонн на НОО. Используются для межпланетных миссий, пилотируемых полётов на Луну и Марс, крупные космические аппараты.</p>
-                    <a href="./object4.html" class="link bottom-left-btn">Подробнее</a>
-                </div>
-            </div>
-
-            <div class="card blue small">
-                <img src="./imgs/rocket_4.jpg" alt="Сверхтяжелая ракета" class="pic">
-                <h3>Сверхтяжёлые ракеты</h3>
-                <div class="text-wrapper">
-                    <p>Особенности: огромные размеры (50–100 м), проектируются для освоения дальнего космоса. Стоимость запуска чрезвычайно высока, но они незаменимы для освоения дальнего космоса.</p>
-                    <p><strong>Примеры:</strong> Saturn V (140 т), SpaceX Starship (до 150 т), NASA SLS (95–130 т), российская «Енисей» (в разработке).</p>
-                    <a href="./object4.html" class="link bottom-left-btn">Подробнее</a>
-                </div>
-            </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="./imgs/dmg_1.jpg" class="d-block w-100 carousel-img"></div>
+            <div class="carousel-item"><img src="./imgs/dmg_2.jpg" class="d-block w-100 carousel-img"></div>
+            <div class="carousel-item"><img src="./imgs/dmg_3.jpg" class="d-block w-100 carousel-img"></div>
+            <div class="carousel-item"><img src="./imgs/dmg_4.jpg" class="d-block w-100 carousel-img"></div>
+            <div class="carousel-item"><img src="./imgs/dmg_5.jpg" class="d-block w-100 carousel-img"></div>
+            <div class="carousel-item"><img src="./imgs/dmg_6.jpg" class="d-block w-100 carousel-img"></div>
         </div>
 
+        <button class="carousel-control-prev" type="button" data-bs-target="#spaceCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#spaceCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
     </div>
-</div>
 
-<footer>
-    <p align="right"><strong>Разработчик:</strong> <i>Кошевой П.О. 6 подгруппа Б9123-09.03.04</i></p>
-</footer>
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <!-- КОЛОНКА 1 -->
+            <div class="col-lg-4">
+                <div class="card large h-100 text-left">
+                    <img src="./imgs/rocket_5.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Основные типы космических ракет</h5>
+                        <p>Космические ракеты — это мощные транспортные системы, предназначенные для вывода полезных
+                            грузов и экипажей за пределы атмосферы. Они бывают одно-, двух- и многоступенчатыми: каждая
+                            ступень обеспечивает свой участок полёта.</p>
+                        <p>По типу используемого топлива ракеты делятся на жидкостные, твёрдотопливные и гибридные.
+                            Жидкостные двигатели позволяют регулировать тягу и повторно включать двигатель,
+                            твёрдотопливные отличаются простотой и надёжностью, а гибридные сочетают достоинства обеих
+                            технологий.</p>
+                        <p>Назначение ракет также различается. Одни применяются для вывода спутников связи и навигации,
+                            другие — для пилотируемых миссий и межпланетных исследований.</p>
+                        <p>Современные ракеты отличаются высокой степенью автоматизации и точности управления.</p>
+                        <p>Космическая отрасль развивается стремительно, создаются сверхтяжёлые ракеты для полётов к
+                            Луне и Марсу.</p>
+                        <p><strong>Списки лучших космических ракет для путешествий</strong></p>
+                        <a href="./forms.html" class="btn btn-primary mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- КОЛОНКА 2 -->
+            <div class="col-lg-8">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-6 d-flex">
+                        <div class="card pink w-100">
+                            <img src="./imgs/rocket_1.jpg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Ракеты малой дальности (лёгкие носители)</h5>
+                                <p>Грузоподъёмность: до 2 тонн на низкую околоземную орбиту. Используются для небольших
+                                    спутников и кубсатов.</p>
+                                <ul>
+                                    <li>Обычно 2–3 ступени</li>
+                                    <li>Недорогие коммерческие пуски</li>
+                                </ul>;
+                                <p><strong>Примеры:</strong> «Союз-2.1в», Electron, PSLV Light</p>
+                                <a href="./object1.html" class="btn btn-primary mt-auto">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-4 h-100">
+                            <div class="card pink h-100">
+                                <img src="./imgs/rocket_3.jpg" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Тяжёлые ракеты</h5>
+                                    <p>Грузоподъёмность: 20–50 тонн. Используются для станций, модулей и дальних миссий.
+                                    </p>
+                                    <a href="./object3.html" class="btn btn-primary mt-auto">Подробнее</a>
+                                </div>
+                            </div>
+
+                            <div class="card pink h-100">
+                                <img src="./imgs/rocket_3.jpg" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Тяжёлые ракеты</h5>
+                                    <p><strong>Примеры:</strong> «Протон-М», Delta IV Heavy, Long March 5</p>
+                                    <a href="./object3.html" class="btn btn-primary mt-auto">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 align-items-stretch mt-4">
+                    <div class="col-lg-6 d-flex">
+                        <div class="card blue w-100">
+                            <img src="./imgs/rocket_2.jpg" class="card-img-top">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Средние ракеты</h5>
+                                <p>Грузоподъёмность: 2–20 тонн. Используются для пилотируемых кораблей и научных миссий.
+                                </p>
+                                <ul>
+                                    <li>Работа на НОО и ГПО</li>
+                                </ul>
+                                <p><strong>Примеры:</strong> «Союз-2", Falcon 9, Ariane 5</p>
+                                <a href="./object2.html" class="btn btn-primary mt-auto">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-4 h-100">
+                            <div class="card blue h-100">
+                                <img src="./imgs/rocket_4.jpg" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Сверхтяжёлые ракеты</h5>
+                                    <p>Грузоподъёмность: более 50 тонн. Используются для проектов освоения дальнего
+                                        космоса.</p>
+                                    <a href="./object4.html" class="btn btn-primary mt-auto">Подробнее</a>
+                                </div>
+                            </div>
+
+                            <div class="card blue h-100">
+                                <img src="./imgs/rocket_4.jpg" class="card-img-top">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Сверхтяжёлые ракеты</h5>
+                                    <p><strong>Примеры:</strong> Saturn V, Starship, SLS, «Енисей»</p>
+                                    <a href="./object4.html" class="btn btn-primary mt-auto">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-end p-3">
+        <strong>Разработчик:</strong> <i>Кошевой П.О. 6 подгруппа Б9123-09.03.04</i>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
