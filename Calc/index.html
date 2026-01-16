@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор ромба</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Калькулятор ромба</h1>
+
+<img id="rhombusImg" src="1.gif" alt="Схема ромба">
+
+<form id="rhombusForm">
+
+    <fieldset>
+        <legend>Тип входных данных</legend>
+
+        <label>
+            <input type="radio" name="inputType" value="diagonals" checked>
+            Диагонали
+        </label>
+
+        <label>
+            <input type="radio" name="inputType" value="sideAngle">
+            Сторона и угол
+        </label>
+
+        <button type="button" id="showBtn">Показать</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Входные данные</legend>
+
+        <div id="diagonalFields">
+            <label>
+                Диагональ d₁:
+                <input type="number" name="d1">
+            </label>
+
+            <label>
+                Диагональ d₂:
+                <input type="number" name="d2">
+            </label>
+        </div>
+
+        <div id="AngleFields">
+            <label>
+                Сторона a:
+                <input type="number" name="side">
+            </label>
+
+            <label>
+                Угол α:
+                <input type="number" name="alpha">
+            </label>
+        </div>
+
+        <div id="error" class="error-text"></div>
+    </fieldset>
+
+    <fieldset id="resultOptions">
+        <legend>Вычисляемые характеристики</legend>
+
+        <label>
+            <input type="checkbox" name="perimeter">
+            Периметр
+        </label>
+
+        <label>
+            <input type="checkbox" name="area">
+            Площадь
+        </label>
+
+        <label>
+            <input type="checkbox" name="height">
+            Высота
+        </label>
+    </fieldset>
+
+    <button type="button" id="calcBtn">Вычислить</button>
+    <button type="reset" id="clearBtn">Очистить</button>
+
+</form>
+
+<div id="results"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
